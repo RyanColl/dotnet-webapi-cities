@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 
 namespace webapi.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("APIPolicy")]
     [ApiController]
     public class ProvincesController : ControllerBase
     {
